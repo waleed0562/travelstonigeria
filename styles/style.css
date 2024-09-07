@@ -28,21 +28,42 @@ nav {
     display: none;
 }
 
-#menu-toggle:checked + .menu-icon + .menu-content {
-    display: block;
-    background-color: white;
-    position: absolute;
-    top: 50px;
-    right: 10px;
-    border: 1px solid #ddd;
+/* Ensure the menu content is hidden initially */
+.menu-content {
+  display: none;
+  background-color: white;
+  position: absolute;
+  top: 50px;
+  right: 10px;
+  border: 1px solid #ddd;
+  z-index: 100;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  width: 200px;
 }
 
+/* Style for the menu links */
 .menu-content a {
-    display: block;
-    padding: 10px;
-    text-decoration: none;
-    color: #333;
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  transition: background-color 0.3s, color 0.3s;
 }
+
+.menu-content a:hover {
+  background-color: #f0f0f0;
+  color: #007bff;
+}
+
+/* Menu Icon Styling */
+.menu-icon {
+  font-size: 24px;
+  cursor: pointer;
+  padding: 10px;
+}
+
 
 .states-list {
     display: flex;
@@ -51,22 +72,8 @@ nav {
     padding: 2em;
 }
 
-.states-list a {
-    display: block;
-    width: 80%;
-    background-color: #4CAF50;
-    color: white;
-    padding: 1em;
-    margin: 0.5em 0;
-    text-align: center;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
 
-.states-list a:hover {
-    background-color: #45a049;
-}
+
 
 footer {
     text-align: center;
@@ -98,42 +105,130 @@ footer {
     border-color: #aaa; /* darker gray border on hover */
   }
 
-  .state-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+  /* Ensure that the state-box elements stack vertically */
+.state-grid {
+  display: block;  /* Ensure that items are stacked vertically */
+}
+
+/* Style for each state-box */
+.state-box {
+  background-color: #f0f0f0;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px; /* Space between state-box elements */
+  width: 100%;         /* Take full width of the parent container */
+  box-sizing: border-box; /* Include padding and border in width */
+  text-align: center;  /* Center the content inside the box */
+}
+
+/* Style for the images inside state-box */
+.state-box img {
+  width: 100%;         /* Ensure images are responsive */
+  height: 150px;
+  object-fit: cover;   /* Ensure the image covers the box */
+  border-radius: 5px 5px 0 0;
+}
+
+/* Style for the headings inside state-box */
+.state-box h3 {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+/* Style for the paragraphs inside state-box */
+.state-box p {
+  margin-top: 10px;
+  color: #666;
+}
+
+/* Style for the links inside state-box */
+.state-box a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Hover effect for links */
+.state-box a:hover {
+  background-color: #e0e0e0;
+}
+
+
+/* Container for main content */
+.content-container {
+  max-width: 800px; /* Adjust the max-width as needed */
+  margin: 0 auto;   /* Center the container */
+  padding: 20px;    /* Add padding around the container */
+}
+
+/* General text styling */
+body {
+  font-size: 16px;  /* Base font size */
+  line-height: 1.6; /* Line height for readability */
+}
+
+/* Responsive font size */
+@media (max-width: 768px) {
+  body {
+      font-size: 14px; /* Smaller font size for smaller screens */
   }
-  
-  .state-box {
-    background-color: #f0f0f0;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Ensure images are responsive */
+img {
+  max-width: 100%;  /* Make sure images do not overflow */
+  height: auto;     /* Maintain aspect ratio */
+}
+/* Connect with Us section */
+.connect-section {
+  background-color: #f8f8f8;
+  padding: 20px;
+  text-align: center;
+  border-top: 1px solid #ddd;
+  margin-top: 20px;
+}
+
+.connect-section h3 {
+  margin-bottom: 15px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+.social-icons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.social-icons a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  margin: 10px 0;
+  transition: color 0.3s ease;
+}
+
+.social-icons img {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+}
+
+.social-icons a:hover {
+  color: #007BFF; /* Change color on hover */
+}
+
+@media (min-width: 768px) {
+  .social-icons {
+      flex-direction: row;
+      justify-content: center;
   }
-  
-  .state-box img {
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 5px 5px 0 0;
+
+  .social-icons a {
+      margin: 0 15px;
   }
-  
-  .state-box h3 {
-    margin-top: 10px;
-    font-weight: bold;
-  }
-  
-  .state-box p {
-    margin-top: 10px;
-    color: #666;
-  }
-  
-  .state-box a {
-    text-decoration: none;
-    color: inherit;
-  }
-  
-  .state-box a:hover {
-    background-color: #e0e0e0;
-  }
+}
