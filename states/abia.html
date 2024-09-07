@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2207357634945891"
-     crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Visit Abia State</title>
@@ -15,7 +13,7 @@
     <img src="../images/abia.jpg" alt="Kaduna Image" class="header-image">
 
     <nav class="dash-menu">
-        <input type="checkbox" id="menu-toggle">
+        
         <label for="menu-toggle" class="menu-icon">&#9776;</label>
         <div class="menu-content">
             <a href="../index.html">Home</a>
@@ -23,29 +21,39 @@
     </nav>
 
     <main>
-        <article>
-            <h2>Introduction</h2>
-            <p>Abia State, located in the southeastern region of Nigeria, is known as “God’s Own State.” Established in 1991, it is a state rich in natural resources, cultural heritage, and economic significance. Its capital is Umuahia, and the largest city is Aba, a commercial hub known for its vibrant markets and entrepreneurial spirit.</p>
-            
-            <h2>Geography and Climate</h2>
-            <p>Abia State is bordered by Imo State to the west, Cross River State to the east, and Akwa Ibom State to the south. The state's geography is characterized by lowland plains, with a mix of tropical rainforests and savannah vegetation. The climate is typically tropical, with two main seasons: the rainy season from April to October, and the dry season from November to March.</p>
-            
-            <h2>Culture and People</h2>
-            <p>The people of Abia are predominantly of Igbo descent, one of the major ethnic groups in Nigeria. The state is known for its rich cultural traditions, including festivals, dances, and music. The New Yam Festival, celebrated annually, is one of the most significant cultural events in the state, marking the harvest of the yam, which is a staple food in the region.</p>
-            
-            <h2>Economic Activities</h2>
-            <p>Abia State plays a vital role in Nigeria’s economy, particularly through its industrial and commercial activities. Aba, often referred to as the “Japan of Africa,” is renowned for its manufacturing industry, producing everything from textiles and leather goods to footwear and household items. The city’s Ariaria International Market is one of the largest markets in West Africa, attracting traders from all over the continent.</p>
-            
-            <h2>Tourist Attractions</h2>
-            <p>Abia State offers a variety of tourist attractions that showcase its history, culture, and natural beauty. The National War Museum in Umuahia provides a deep dive into Nigeria’s civil war history, while the Azumini Blue River, with its crystal-clear waters, is a favorite spot for relaxation and picnics. Other attractions include the Akwete Cloth Weaving Village, known for its traditional textile production, and the Long Juju of Arochukwu, a historic religious site.</p>
-            
-            <h2>Education and Innovation</h2>
-            <p>Abia State is also a center of education and innovation. The state is home to several tertiary institutions, including Abia State University, Michael Okpara University of Agriculture, and the Abia State Polytechnic. These institutions contribute significantly to the intellectual and professional development of the state’s youth.</p>
-            
-            <h2>Conclusion</h2>
-            <p>Whether you are interested in exploring Nigeria's rich cultural heritage, engaging in business, or simply enjoying the scenic beauty, Abia State offers a unique experience. Its blend of history, culture, and commerce makes it a must-visit destination for anyone looking to discover the heart of Nigeria.</p>
-        </article>
+        <div class="content-container">
+        
+            <article>
+                <h2>Introduction</h2>
+                <p>Abia State, located in the southeastern region of Nigeria, is known as “God’s Own State.” Established in 1991, it is a state rich in natural resources, cultural heritage, and economic significance. Its capital is Umuahia, and the largest city is Aba, a commercial hub known for its vibrant markets and entrepreneurial spirit.</p>
+                
+                <h2>Geography and Climate</h2>
+                <p>Abia State is bordered by Imo State to the west, Cross River State to the east, and Akwa Ibom State to the south. The state's geography is characterized by lowland plains, with a mix of tropical rainforests and savannah vegetation. The climate is typically tropical, with two main seasons: the rainy season from April to October, and the dry season from November to March.</p>
+                
+                <h2>Culture and People</h2>
+                <p>The people of Abia are predominantly of Igbo descent, one of the major ethnic groups in Nigeria. The state is known for its rich cultural traditions, including festivals, dances, and music. The New Yam Festival, celebrated annually, is one of the most significant cultural events in the state, marking the harvest of the yam, which is a staple food in the region.</p>
+                
+                <h2>Economic Activities</h2>
+                <p>Abia State plays a vital role in Nigeria’s economy, particularly through its industrial and commercial activities. Aba, often referred to as the “Japan of Africa,” is renowned for its manufacturing industry, producing everything from textiles and leather goods to footwear and household items. The city’s Ariaria International Market is one of the largest markets in West Africa, attracting traders from all over the continent.</p>
+                
+                <h2>Tourist Attractions</h2>
+                <p>Abia State offers a variety of tourist attractions that showcase its history, culture, and natural beauty. The National War Museum in Umuahia provides a deep dive into Nigeria’s civil war history, while the Azumini Blue River, with its crystal-clear waters, is a favorite spot for relaxation and picnics. Other attractions include the Akwete Cloth Weaving Village, known for its traditional textile production, and the Long Juju of Arochukwu, a historic religious site.</p>
+                
+                <h2>Education and Innovation</h2>
+                <p>Abia State is also a center of education and innovation. The state is home to several tertiary institutions, including Abia State University, Michael Okpara University of Agriculture, and the Abia State Polytechnic. These institutions contribute significantly to the intellectual and professional development of the state’s youth.</p>
+                
+                <h2>Conclusion</h2>
+                <p>Whether you are interested in exploring Nigeria's rich cultural heritage, engaging in business, or simply enjoying the scenic beauty, Abia State offers a unique experience. Its blend of history, culture, and commerce makes it a must-visit destination for anyone looking to discover the heart of Nigeria.</p>
+            </article>
+     </div>
     </main>
+    <script>
+        document.querySelector('.menu-icon').addEventListener('click', function() {
+            const menuContent = document.querySelector('.menu-content');
+            menuContent.style.display = menuContent.style.display === 'block' ? 'none' : 'block';
+        });
+    </script>
+    
 
     <footer>
         <a href="abuja.html" class="next-article">Next Article: Visit Abuja State</a>
