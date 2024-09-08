@@ -88,9 +88,12 @@ footer {
 .header-image {
     display: block;
     margin-top: 1px;
-    width: 100%;
+    width: 80%;
     height: 200px;
     object-fit: cover;
+    margin-left: auto;
+    margin-right: auto;
+    
   }
   .next-article {
     background-color: #f0f0f0; /* light gray background */
@@ -288,4 +291,87 @@ button[type="submit"] {
 
 button[type="submit"]:hover {
   background-color: #0056b3;
+}
+
+.museum-image {
+  display: inline-block;
+  margin-top: 10px;
+  width: 48%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.dubar-image {
+  display: inline-block;
+  margin-top: 10px;
+  width: 30%;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Related Posts Section */
+.related-posts {
+  margin: 40px 0;
+  padding: 20px;
+  background-color: #f0f0f0;
+  text-align: center;
+}
+
+.related-posts h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Grid Layout for Related Posts */
+.related-post-grid {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.related-post {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 30%; /* 3 items per row */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.related-post:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.related-post a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.related-post img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.related-post h3 {
+  margin: 10px 0;
+  font-size: 18px;
+  color: #007BFF;
+}
+
+/* Make Related Posts Responsive */
+@media (max-width: 768px) {
+  .related-post {
+      width: 48%; /* 2 items per row on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .related-post {
+      width: 100%; /* 1 item per row on extra small screens */
+  }
 }
