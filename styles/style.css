@@ -122,13 +122,16 @@ footer {
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px; /* Space between state-box elements */
-  width: 80%;         /* Take full width of the parent container */
+  width: 1000%;         /* Take full width of the parent container */
   box-sizing: border-box; /* Include padding and border in width */
   text-align: center;  /* Center the content inside the box */
   margin-left: auto;
   margin-right: auto;
 }
-
+@media (min-width: 1024px) {
+  .state-box {
+    width: 60%;       /* 60% width for laptop users */
+  }
 /* Style for the images inside state-box */
 .state-box img {
   width: 100%;         /* Ensure images are responsive */
